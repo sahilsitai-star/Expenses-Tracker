@@ -1,0 +1,20 @@
+workflows:
+  sahil-khata-android:
+    name: Sahil Khata Android APK
+    max_build_duration: 60
+    environment:
+      flutter: stable
+    scripts:
+      - name: Generate Android platform files
+        script: flutter create --platforms=android --project-name=sahil_khata .
+      - name: Get Flutter packages
+        script: flutter pub get
+      - name: Run Flutter tests
+        script: flutter test
+      - name: Analyze Dart source
+        script: flutter analyze
+      - name: Build release APK
+        script: flutter build apk --release
+    artifacts:
+      - build/app/outputs/flutter-apk/*.apk
+      - flutter_drive.log
