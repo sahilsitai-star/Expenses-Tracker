@@ -1,0 +1,11 @@
+build\app\outputs\flutter-apk\app-release.apk.dart_tool/
+.packages
+.pub/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.metadata
+.idea/
+.vscode/
+android/local.properties
+tools/
